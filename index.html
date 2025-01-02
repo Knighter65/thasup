@@ -9,47 +9,59 @@
             --img-text-margin: 40px;
         }
 
+        body {
+            background-color: rgb(83, 41, 180);
+            color: #FFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
         .album-container {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .rockstar {
             cursor: pointer;
-            margin-left: var(--img-text-margin);
+            width: 100%;
+            max-width: 256px;
+            transition: transform 0.3s ease;
         }
 
-        p {
-            color: #FFFF;
+        .rockstar:hover {
+            transform: scale(1.05);
         }
 
-        h3 {
-            color: #FFFF;
+        @media screen and (max-width: 600px) {
+            .rockstar {
+                max-width: 150px;
+            }
         }
 
-        h2 {
-            color: #FFFF;
+        @media screen and (max-width: 400px) {
+            h2 {
+                font-size: 1.2em;
+            }
         }
-
-        body {
-            background-color: rgb(83, 41, 180);
-        }
-
-        .invisible
-        {
-            visibility: hidden;
-        }
-
     </style>
 </head>
 <body>
     <h2>Thasup's Legacy</h2>
     <div class="album-container">    
 
-        <img src="236451.webp" height="256" width="256" onclick="location.href='236451.html'" class="rockstar">
-        <img src="https://i.scdn.co/image/ab67616d00001e0272cfdfd53af51bcfed067d75" height="256" width="256" onclick="location.href='carattere speciale.html'" class="rockstar">
-        <img src="https://i.scdn.co/image/ab67616d00001e02f6da146e4b29f6cb182c6a72" height="256" width="256" onclick="location.href='sfaciolate mixtape.html'" class="rockstar">
-        <img src="https://i.scdn.co/image/ab67616d00001e02e839ec97b284acc8b7f53165" height="256" width="256" onclick="location.href='casa gospel.html'" class="rockstar">
+        <img src="236451.webp" alt="Album 1" onclick="location.href='236451.html'" class="rockstar">
+        <img src="https://i.scdn.co/image/ab67616d00001e0272cfdfd53af51bcfed067d75" alt="Album 2" onclick="location.href='carattere speciale.html'" class="rockstar">
+        <img src="https://i.scdn.co/image/ab67616d00001e02f6da146e4b29f6cb182c6a72" alt="Album 3" onclick="location.href='sfaciolate mixtape.html'" class="rockstar">
+        <img src="https://i.scdn.co/image/ab67616d00001e02e839ec97b284acc8b7f53165" alt="Album 4" onclick="location.href='casa gospel.html'" class="rockstar">
     </div>
 </body>
 </html>
