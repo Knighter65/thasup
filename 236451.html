@@ -17,7 +17,12 @@
             font-family: Arial, sans-serif;
         }
 
-        h1, h3 {
+        h1 {
+            color: #FFFF;
+            text-align: center;
+        }    
+        
+        h3 {
             color: #FFFF;
             text-align: center;
             margin: 20px 0;
@@ -42,9 +47,9 @@
 
         .album-container {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
             padding: 20px;
             box-sizing: border-box;
         }
@@ -66,6 +71,18 @@
         .hear {
             max-width: 90%;
             text-align: center;
+        }
+
+        .tracklist {
+            color: #FFFF;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .tracklist li {
+            font-size: 1.1em;
         }
 
         @media screen and (max-width: 1024px) {
@@ -100,7 +117,6 @@
                 height: 280px;
             }
         }
-
     </style>  
 </head>
 <body>
@@ -123,28 +139,29 @@
 
     <h3>Tracklist:</h3>
     <div class="album-container">
-        <p>0 - 0ffline <br>
-            1 - come fa1 <br>
-            2 - 2ollipop <br>
-            3 - fuck 3x <br>
-            4 - scuol4 <br>
-            5 - 5olo <br>
-            6 - 6itch RMX <br>
-            7 - blun7 a swishland <br>
-            8 - m8nstar <br>
-            9 - oh 9od <br>
-            10 - gua10 <br>
-            11 - parano1a k1d <br>
-            12 - m12ano <br>
-            13 - occh1 purpl3 <br>
-            14 - no14 <br>
-            15 - ch1 5ei te <br>
-            16 - sw1n6o <br>
-            17 - 7rapper ma1 <br>
-            18 - 8brosk1 <br>
-            19 - bubb1e 9um <br>
-            20 - pers0na2
-        </p>
+        <ul class="tracklist">
+            <li>0 - 0ffline</li>
+            <li>1 - come fa1</li>
+            <li>2 - 2ollipop</li>
+            <li>3 - fuck 3x</li>
+            <li>4 - scuol4</li>
+            <li>5 - 5olo</li>
+            <li>6 - 6itch RMX</li>
+            <li>7 - blun7 a swishland</li>
+            <li>8 - m8nstar</li>
+            <li>9 - oh 9od</li>
+            <li>10 - gua10</li>
+            <li>11 - parano1a k1d</li>
+            <li>12 - m12ano</li>
+            <li>13 - occh1 purpl3</li>
+            <li>14 - no14</li>
+            <li>15 - ch1 5ei te</li>
+            <li>16 - sw1n6o</li>
+            <li>17 - 7rapper ma1</li>
+            <li>18 - 8brosk1</li>
+            <li>19 - bubb1e 9um</li>
+            <li>20 - pers0na2</li>
+        </ul>
         <iframe src="https://open.spotify.com/embed/album/2zBib5x7l1D5KPXPEePOab?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 </body>
