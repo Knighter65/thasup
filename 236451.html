@@ -4,61 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>23 6451</title>
-</head>
-<body style="background-color:rgb(83, 41, 180);">
-    
     <style>   
-            :root {
-            --img-text-margin: 200px;
-        }
-        h1
-            {
-               color: #FFFF;
-            }    
-        .home
-        {
-            cursor: pointer;
-            color: aqua;
-            margin-left: var(--img-text-margin);
-        }
-        p {
-            color: #FFFF;
-            align-items: center;
+        :root {
+            --img-text-margin: 40px;
         }
 
-        h3 {
+        body {
+            background-color: rgb(83, 41, 180);
             color: #FFFF;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h3 {
+            color: #FFFF;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        p {
+            color: #FFFF;
+            padding: 10px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 0 10px;
+        }
+
+        .home {
+            cursor: pointer;
+            color: aqua;
+            text-align: center;
+            font-size: 1.2em;
+            padding: 20px;
+            text-decoration: none;
         }
 
         .album-container {
             display: flex;
-            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .album-container iframe {
+            border-radius: 12px;
+            width: 100%;
+            max-width: 600px;
+            height: 352px;
         }
 
         .title-container {
             display: flex;
-            align-items: left;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
         }
 
-        .hear
-        {
-            margin-left: var(--img-text-margin);
+        .hear {
+            max-width: 90%;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .album-container {
+                padding: 10px;
+            }
         }
 
         @media screen and (max-width: 600px) {
-            .rockstar {
-                max-width: 150px;
+            h1 {
+                font-size: 1.8em;
+            }
+            .home {
+                font-size: 1em;
+            }
+            p {
+                font-size: 1em;
+            }
+            iframe {
+                height: 300px;
             }
         }
 
         @media screen and (max-width: 400px) {
-            h2 {
-                font-size: 1.2em;
+            h1 {
+                font-size: 1.4em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            iframe {
+                height: 280px;
             }
         }
+
     </style>  
-       <div class="title-container">
-        <h1> Ascolta 23 6451!</h1>
+</head>
+<body>
+    <div class="title-container">
+        <h1>Ascolta 23 6451!</h1>
         <p class="hear">23 6451 is the groundbreaking debut album from Italian rapper and producer thasup (formerly known as Tha Supreme).
             <br>
             Released in 2019, this genre-defying project blends elements of trap, hip-hop, and experimental sounds, creating a distinct auditory experience that has captivated listeners worldwide.
@@ -70,39 +117,35 @@
             Through introspective lyrics, innovative beats, and his signature vocal delivery, thasup redefines the boundaries of modern rap, making 23 6451 an essential listen for fans of cutting-edge music.
             <br>
             Dive into 23 6451 and discover why thasup is one of Italy's most influential contemporary artists.
-            <br>
-         </p>   
-        <h1 onclick="location.href='index.html'" class="home"> Torna alla home </h1>
-    </div>
-        <h3 class="invisible">Tracklist:</h3>
-   <div class="album-container">
-    <p class="invisible"> 0 - 0ffline <br>
-        1 - come fa1 <br>
-        2 - 2ollipop <br>
-        3 - fuck 3x <br>
-        4 - scuol4 <br>
-        5 - 5olo <br>
-        6 - 6itch RMX <br>
-        7 - blun7 a swishland <br>
-        8 - m8nstar <br>
-        9 - oh 9od <br>
-        10 - gua10 <br>
-        11 - parano1a k1d <br>
-        12 - m12ano <br>
-        13 - occh1 purpl3 <br>
-        14 - no14 <br>
-        15 - ch1 5ei te <br>
-        16 - sw1n6o <br>
-        17 - 7rapper ma1 <br>
-        18 - 8brosk1 <br>
-        19 - bubb1e 9um <br>
-        20 - pers0na2 <br>
-    </p>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2zBib5x7l1D5KPXPEePOab?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </p>   
+        <h1 onclick="location.href='index.html'" class="home">Torna alla home</h1>
     </div>
 
-
-
-
+    <h3>Tracklist:</h3>
+    <div class="album-container">
+        <p>0 - 0ffline <br>
+            1 - come fa1 <br>
+            2 - 2ollipop <br>
+            3 - fuck 3x <br>
+            4 - scuol4 <br>
+            5 - 5olo <br>
+            6 - 6itch RMX <br>
+            7 - blun7 a swishland <br>
+            8 - m8nstar <br>
+            9 - oh 9od <br>
+            10 - gua10 <br>
+            11 - parano1a k1d <br>
+            12 - m12ano <br>
+            13 - occh1 purpl3 <br>
+            14 - no14 <br>
+            15 - ch1 5ei te <br>
+            16 - sw1n6o <br>
+            17 - 7rapper ma1 <br>
+            18 - 8brosk1 <br>
+            19 - bubb1e 9um <br>
+            20 - pers0na2
+        </p>
+        <iframe src="https://open.spotify.com/embed/album/2zBib5x7l1D5KPXPEePOab?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
 </body>
 </html>
