@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sFaCioLaTe miXTaPe</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-</head>
-<body style= "background-color: rgb(27, 114, 180)">
-
-    <style>   
+    <style>
         :root {
             --img-text-margin: 20px;
         }
@@ -92,55 +88,68 @@
             }
         }
 
+        .audio-player-box {
+            background-color: rgb(26, 66, 97);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            padding: 20px;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
         .audio-player {
-    display: flex;
-    align-items: center;
-    background-color: rgb(16, 80, 128);    
-    border-radius: 10px;
-    padding: 10px;
-    width: 350px;
-}
+            display: flex;
+            align-items: center;
+            background-color: rgb(16, 80, 128);    
+            border-radius: 10px;
+            padding: 10px;
+            width: 100%;
+        }
 
-.audio-info {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
+        .audio-info {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
 
-.album-cover {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
+        .album-cover {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
 
-.track-info {
-    color: white;
-}
+        .track-info {
+            color: white;
+        }
 
-.track-name {
-    font-size: 14px;
-    font-weight: bold;
-}
+        .track-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-.artist-name {
-    font-size: 12px;
-    color: #b3b3b3;
-}
+        .artist-name {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
 
-audio {
-    flex-grow: 1;
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
+        audio {
+            flex-grow: 1;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
     </style>  
+</head>
+<body style="background-color: rgb(27, 114, 180)">
 
     <div class="title-container">
         <h1> Ascolta sFaCioLaTe miXTaPe pt. 2!</h1>
-        <p class="hear">sFaCioLaTe Mixtape Pt. 2 is the highly anticipated successor to the original mixtape. <br> It has been in development over the course of three years, with the number of tracks being too extensive to fit into a single project.<br> The listed tracks are merely teasers, and it remains uncertain whether they will be included in the final release.
-        </p>
+        <p class="hear">sFaCioLaTe Mixtape Pt. 2 is the highly anticipated successor to the original mixtape. <br> It has been in development over the course of three years, with the number of tracks being too extensive to fit into a single project.<br> The listed tracks are merely teasers, and it remains uncertain whether they will be included in the final release.</p>
         <h1 onclick="location.href='index.html'" class="home"> Torna alla home </h1>
     </div>
 
@@ -157,29 +166,243 @@ audio {
         <li>9 - i 9oW</li>
         <li>10 - p10ve</li>
         <li>11 - naVi ce11a</li>
-        <li>12 - ?</li>
-        <li>13 - ?</li>
-        <li>14 - ?</li>
-        <li>15 - ?</li>
+        <li>12 - pArt1co2aRe</li>
+        <li>13 - il cas1no che ho d3ntro!?</li>
+        <li>14 - p1Le di c4sH</li>
+        <li>15 - p51cho!</li>
         <li>16 - 6 1 akkolino</li>
     </ul>
 
     <div class="album-container">
-        <div class="audio-player">
-            <div class="audio-info">
-                <img src="236451.webp" alt="Album Cover" class="album-cover">
-                <div class="track-info">
-                    <span class="track-name">p10ve</span>
-                    <span class="artist-name">thasup</span>
+        <div class="audio-player-box">
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">gua1</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
                 </div>
+                <audio controls>
+                    <source src="sm2/thasup - gua1.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
-            <audio controls>
-                <source src="thasup - p10ve.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">ra2zo</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - ra2zo.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">PuRpl3</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - PuRpl3.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">swAggAvamo a Scuol4</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - swAggAvamo a Scuol4.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">aMo phaRe IL ca5h</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - aMo phaRe IL ca5h.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">6iTch pHake!</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - 6iTch pHake!.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">skr7</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - skr7.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">gum8aLl FreEstYle</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - gum8aLl FreEstYle.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">i 9oW</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - i 9oW.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">p10ve</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - p10ve.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">naVi ce11a</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - naVi ce11a.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">pArt1co2aRe</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - pArt1co2aRe.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">il cas1no che ho d3ntro!?</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - il cas1no che ho d3ntro.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">p1Le di c4sH</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - p1Le di c4sH.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">p51cho!</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - p51cho!.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">6 1 akkolino</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="sm2/thasup - 6 1 akkollino.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
         </div>
+    </div>
 
-
-    
 </body>
 </html>
