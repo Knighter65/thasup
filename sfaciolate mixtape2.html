@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sFaCioLaTe miXTaPe</title>
+    <title>sFaCioLaTe miXTaPe pt.2</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        
         :root {
             --img-text-margin: 20px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         h1 {
             color: #FFFF;
             text-align: center;
+            font-family: 'adrip1', sans-serif;
         }    
         .home {
             cursor: pointer;
@@ -21,8 +34,32 @@
             display: block;
             margin-top: 20px;
         }
+
+        @font-face {
+        font-family: 'adrip1'; 
+        src: url('fonts/adrip1.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'funkrocker';
+        src: url('fonts/Funkrocker.otf') format('truetype'); 
+        font-weight: normal;
+        font-style: normal;
+        }
+
+
         p {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'funkrocker', sans-serif;
+            color: #FFFF;
+            align-items: center;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        li {
+            font-family: 'funkrocker', sans-serif;
             color: #FFFF;
             align-items: center;
             text-align: center;
@@ -30,9 +67,9 @@
         }
 
         h3 {
+            font-family: 'adrip1', sans-serif;
             color: #FFFF;
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .album-container {
@@ -116,6 +153,14 @@
             margin-right: 10px;
         }
 
+        .sm2-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+
         .album-cover {
             width: 50px;
             height: 50px;
@@ -143,6 +188,7 @@
             border: none;
             outline: none;
         }
+
     </style>  
 </head>
 <body style="background-color: rgb(27, 114, 180)">
@@ -173,9 +219,15 @@
         <li>16 - 6 1 akkolino</li>
     </ul>
 
-    <div class="album-container">
-        <div class="audio-player-box">
 
+
+    <div class="album-container">
+        
+        <div class="audio-player-box">
+            <div class="sm2-info">
+            <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" width="200" height="200">
+            <h1 margin-left: var(--img-text-margin);>sFaCioLaTe miXTaPe pt.2</h1>
+            </div>
             <div class="audio-player">
                 <div class="audio-info">
                     <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover" class="album-cover">
@@ -403,6 +455,8 @@
 
         </div>
     </div>
+
+
 
 </body>
 </html>

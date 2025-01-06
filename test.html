@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sFaCioLaTe miXTaPe Embed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .embed-player {
+            background: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 360px;
+            overflow: hidden;
+        }
+        .cover {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #ccc;
+            background-size: cover;
+            background-position: center;
+        }
+        .cover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+        }
+        .info {
+            padding: 15px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 5px;
+        }
+        .artist {
+            font-size: 14px;
+            color: #b3b3b3;
+            margin: 0 0 15px;
+        }
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .controls button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .progress-bar {
+            flex-grow: 1;
+            margin: 0 10px;
+            background: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 5px;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: #1db954;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="embed-player">
+        <div class="cover" style="background-image: url(https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw);">
+
+        </div>
+        <div class="info">
+            <p class="title" id="track-title">gua1</p>
+            <p class="artist" id="track-artist">Artist: thasup</p>
+            <div class="controls">
+                <button id="prev-button">⏮</button>
+                <button id="play-button">▶️</button>
+                <button id="next-button">⏭</button>
+                <div class="progress-bar">
+                    <span id="progress"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const tracks = [
+            { title: "gua1", artist: "thasup", file: "sm2/thasup - gua1.mp3" },
+            { title: "ra2zo", artist: "thasup", file: "sm2/thasup - ra2zo.mp3" },
+            { title: "PuRpl3", artist: "thasup", file: "sm2/thasup - PuRpl3.mp3" },
+            { title: "swAggAvamo a Scuol4", artist: "thasup", file: "sm2/thasup - swAggAvamo a Scuol4.mp3" },
+            { title: "aMo phaRe IL ca5h", artist: "thasup", file: "tracks/aMo_phaRe_IL_ca5h.mp3" },
+            { title: "6iTch pHake!", artist: "thasup", file: "tracks/6iTch_pHake.mp3" }
+        ];
+
+        let currentTrack = 0;
+        const audio = new Audio(tracks[currentTrack].file);
+        const titleElement = document.getElementById("track-title");
+        const artistElement = document.getElementById("track-artist");
+        const playButton = document.getElementById("play-button");
+        const progress = document.getElementById("progress");
+
+        function updateTrack() {
+            titleElement.textContent = tracks[currentTrack].title;
+            artistElement.textContent = "Artist: " + tracks[currentTrack].artist;
+            audio.src = tracks[currentTrack].file;
+        }
+
+        function playPauseTrack() {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = "⏸️";
+            } else {
+                audio.pause();
+                playButton.textContent = "▶️";
+            }
+        }
+
+        function nextTrack() {
+            currentTrack = (currentTrack + 1) % tracks.length;
+            updateTrack();
+            audio.play();
+            playButton.textContent = "⏸️";
+        }
+
+        function prevTrack() {
+            currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+            updateTrack();
+            audio.play();
+            playButton.textContent = "⏸️";
+        }
+
+        audio.addEventListener("timeupdate", () => {
+            const percentage = (audio.currentTime / audio.duration) * 100;
+            progress.style.width = percentage + "%";
+        });
+
+        playButton.addEventListener("click", playPauseTrack);
+        document.getElementById("next-button").addEventListener("click", nextTrack);
+        document.getElementById("prev-button").addEventListener("click", prevTrack);
+
+        updateTrack();
+    </script>
+</body>
+</html>
