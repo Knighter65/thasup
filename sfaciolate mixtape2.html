@@ -153,22 +153,25 @@
             margin-right: 10px;
         }
 
-        .sm2-info {
-            display: flex;
-            flex-direction: row;
+        .album-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+       .album-covert {
+    width: 150px; 
+    height: 150px;
+    border-radius: 10px; 
         }
 
-        .sm2-title {
-            margin-right: 95px;
-            margin-top: 55px;
-        }
-
-        
-
-        
-        .sm2-cover {
-            margin-right: 100px;
-        }
+.album-title {
+    font-family: 'adrip1', sans-serif;
+    font-size: 1.5em; 
+    color: white;
+    text-align: left;
+    white-space: nowrap; 
+}
 
 
         .album-cover {
@@ -234,9 +237,9 @@
     <div class="album-container">
         
         <div class="audio-player-box">
-            <div class="sm2-info">
-            <img src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" width="150" height="150" class="sm2-cover">
-            <h1 class="sm2-title">sFaCioLaTe miXTaPe pt.2</h1>
+            <div class="album-header">
+                <img class="album-covert" src="https://imgs.search.brave.com/uCtjx_Tcy8SoHpQ3mbW2XquVh_WWCp7T94O_PI9NunM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWtWeXI2/dVU5RkFBV0p5VzMt/UmFFYjVRLXQ1MDB4/NTAwLmpwZw" alt="Album Cover">
+                <span class="album-title">sFaCioLaTe miXTaPe pt.2</span>
             </div>
             <div class="audio-player">
                 <div class="audio-info">
