@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sFaCioLaTe miXTaPe pt.2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --img-text-margin: 20px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #FFFF;
+            text-align: center;
+            font-family: 'adrip1', sans-serif;
+        }    
+        .home {
+            cursor: pointer;
+            color: aqua;
+            margin-left: var(--img-text-margin);
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+        }
+
+        @font-face {
+        font-family: 'adrip1'; 
+        src: url('fonts/adrip1.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @font-face {
+        font-family: 'funkrocker';
+        src: url('fonts/Funkrocker.otf') format('truetype'); 
+        font-weight: normal;
+        font-style: normal;
+        }
+
+
+        p {
+            font-family: 'funkrocker', sans-serif;
+            color: #FFFF;
+            align-items: center;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        li {
+            font-family: 'funkrocker', sans-serif;
+            color: #FFFF;
+            align-items: center;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        h3 {
+            font-family: 'adrip1', sans-serif;
+            color: #FFFF;
+            text-align: center;
+        }
+
+        .album-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .album-container::before {
+    content: '';
+    position: absolute;
+    width: 200px; /* Adjust based on the size of your album container */
+    height: 200px; /* Adjust for the ring's size */
+    border: 5px solid rgba(255, 255, 255, 0.8); /* Adjust thickness and color */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    z-index: -1; /* Place it behind the container */
+    transform: rotate(20deg); /* Tilt the ring */
+    top: calc(50% - 100px); /* Center the ring */
+    left: calc(50% - 100px); /* Center the ring */
+     } 
+
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .hear {
+            margin-left: 0;
+            text-align: center;
+        }
+
+        iframe {
+            border-radius: 12px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .tracklist {
+            color: #FFFF;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .tracklist li {
+            font-size: 1.1em;
+        }
+
+        @media screen and (max-width: 600px) {
+            .home {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+
+        .audio-player-box {
+            background-color: rgb(26, 66, 97);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            padding: 20px;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .audio-player {
+            display: flex;
+            align-items: center;
+            background-color: rgb(16, 80, 128);    
+            border-radius: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .audio-info {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .album-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+       .album-covert {
+    width: 150px; 
+    height: 150px;
+    border-radius: 10px; 
+        }
+
+.album-title {
+    font-family: 'adrip1', sans-serif;
+    font-size: 1.5em; 
+    color: white;
+    text-align: left;
+    white-space: nowrap; 
+}
+
+
+        .album-cover {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .track-info {
+            color: white;
+        }
+
+        .track-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .artist-name {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+
+        audio {
+            flex-grow: 1;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+    </style>  
+</head>
+<body style="background-color: rgb(27, 114, 180)">
+
+    <div class="title-container">
+        <h1> Disco di Platinum presto fuori!</h1>
+        <p class="hear">Disco di Platinum is the anticipated title of thasup's fourth studio album and fifth overall project. <br> Below is a curated library of MP3s featuring all the material he has teased so far.</p>
+        <h1 onclick="location.href='index.html'" class="home"> Torna alla home </h1>
+    </div>
+
+    <h3>Tracklist:</h3>
+    <ul class="tracklist">
+        <li>? - Via da te</li>
+        <li>? - 2ombie</li>
+        <li>? - Backwood</li>
+        <li>? - Paura</li>
+        <li>? - Mentre lei muove</li>
+        <li>? - Roba illegale</li>
+        <li>? - Valentino Balenciaga</li>
+        <li>? - Pile di Cash</li>
+        <li>? - Ice gelato</li>
+        <li>? - Lemon haze</li>
+        <li>? - Pozione</li>
+    </ul>
+
+
+
+    <div div class="album-container" style="position: relative;">
+        
+        <div class="audio-player-box">
+            <div class="album-header">
+                <img class="album-covert" src="dp/disco di platinum.jpg" alt="Album Cover">
+                <span class="album-title">Disco di Platinum</span>
+            </div>
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Via da te</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - via da te.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">2ombie</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - 2ombie.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Backwood</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - backwood.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Paura</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - paura.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Mentre lei muove</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - mentre lei muove.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Roba illegale</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - roba illegale.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Valentino Balenciaga</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - Valentino Balenciaga.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Pile di Cash</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - pile di cash.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Ice gelato</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - ice gelato.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Lemon Haze</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - lemon haze.flac" type="audio/flac">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <div class="audio-info">
+                    <img src="dp/galaxy.jpg" alt="Album Cover" class="album-cover">
+                    <div class="track-info">
+                        <span class="track-name">Pozione</span>
+                        <span class="artist-name">thasup</span>
+                    </div>
+                </div>
+                <audio controls>
+                    <source src="dp/thasup - pozione.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+        </div>
+    </div>
+
+  
+
+</body>
+</html>
